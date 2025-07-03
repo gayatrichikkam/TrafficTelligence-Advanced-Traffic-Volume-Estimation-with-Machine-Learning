@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Volume Estimation</title>
+    <style>
+        body {
+            background-image: url("/static/background.png");
+            background-size: cover;
+            font-family: Arial;
+            color: black;
+            font-weight: bold;
+        }
+        input, select {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Traffic Volume Estimation</h1>
+    <form action="/predict" method="post">
+        Holiday: <select name="holiday">
+            <option value="0">None</option>
+            <option value="1">Holiday</option>
+        </select><br>
+        Temp: <input type="text" name="temp"><br>
+        Rain: <input type="text" name="rain"><br>
+        Snow: <input type="text" name="snow"><br>
+        Weather: <select name="weather">
+            <option value="1">Clear</option>
+            <option value="2">Clouds</option>
+            <option value="3">Mist</option>
+            <option value="4">Rain</option>
+            <option value="5">Snow</option>
+        </select><br>
+        Year: <input type="text" name="year"><br>
+        Month: <input type="text" name="month"><br>
+        Day: <input type="text" name="day"><br>
+        Hours: <input type="text" name="hours"><br>
+        Minutes: <input type="text" name="minutes"><br>
+        Seconds: <input type="text" name="seconds"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
